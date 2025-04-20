@@ -10,7 +10,7 @@ app.use(cors({
 }));
 
 app.use('/*', createProxyMiddleware({
-    target: 'connectedapp-production.up.railway.app',
+    target: 'https://connectedapp-production.up.railway.app',
     changeOrigin: true,
     secure: true,
     onProxyReq: (proxyReq, req, res) => {

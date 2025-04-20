@@ -9,6 +9,11 @@ app.use(cors({
     credentials: true
 }));
 
+app.options('*', cors({
+    origin: 'https://connectedapp-frontend.onrender.com',
+    credentials: true,
+}))
+
 app.use('/', createProxyMiddleware({
     target: 'https://connectedapp-production.up.railway.app',
     changeOrigin: true,
@@ -17,6 +22,9 @@ app.use('/', createProxyMiddleware({
         proxyReq.setHeader('Origin', 'https://connectedapp-frontend.onrender.com');        
     },
     onProxyRes: (proxyRes, req, res) => {
+        delete proxyRes.headers['access-control-allow-origin'];
+        delete proxyRes.headers['access-control-allow-credentials'];
+
         proxyRes.headers['Access-Control-Allow-Origin'] = 'https://connectedapp-frontend.onrender.com';
         proxyRes.headers['Access-Control-Allow-Credentials'] = 'true';
     }

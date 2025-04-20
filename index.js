@@ -9,7 +9,7 @@ app.use(cors({
     credentials: true
 }));
 
-app.use('/*', createProxyMiddleware({
+app.use('/', createProxyMiddleware({
     target: 'https://connectedapp-production.up.railway.app',
     changeOrigin: true,
     secure: true,

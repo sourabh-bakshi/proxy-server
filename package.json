@@ -1,0 +1,28 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "proxy-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourabh-bakshi/proxy-server.git"
+  },
+  "keywords": [
+    "proxy",
+    "server"
+  ],
+  "author": "Sourabh Bakshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sourabh-bakshi/proxy-server/issues"
+  },
+  "homepage": "https://github.com/sourabh-bakshi/proxy-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}

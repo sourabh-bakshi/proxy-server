@@ -9,10 +9,10 @@ app.use(cors({
     credentials: true
 }));
 
-// app.options('*', cors({
-//     origin: 'https://connectedapp-frontend.onrender.com',
-//     credentials: true,
-// }))
+app.options('*', cors({
+    origin: 'https://connectedapp-frontend.onrender.com',
+    credentials: true,
+}))
 
 app.use('/', createProxyMiddleware({
     target: 'https://connectedapp-production.up.railway.app',

@@ -9,7 +9,7 @@ app.use(cors({
     credentials: true
 }));
 
-app.options('*', cors({
+app.options('/*', cors({
     origin: 'https://connectedapp-frontend.onrender.com',
     credentials: true,
 }))
